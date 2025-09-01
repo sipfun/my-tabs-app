@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import Tab1 from "./tabs/Tab1";
+import Tab2 from "./tabs/Tab2";
+import Tab3 from "./tabs/Tab3";
 
 function App() {
   const [activeTab, setActiveTab] = useState("tab1");
@@ -47,9 +50,9 @@ function App() {
 
       {/* Contenido */}
       <div style={{ padding: "20px", border: "1px solid #ccc" }}>
-        {activeTab === "tab1" && <p>Contenido de la Pestaña 1</p>}
-        {activeTab === "tab2" && <p>Contenido de la Pestaña 2</p>}
-        {activeTab === "tab3" && <p>Contenido de la Pestaña 3</p>}
+        {activeTab === "tab1" && <Tab1 />}
+        {activeTab === "tab2" && <Tab2 />}
+        {activeTab === "tab3" && <Tab3 />}
       </div>
     </div>
   );
